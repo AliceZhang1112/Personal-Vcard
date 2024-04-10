@@ -1,11 +1,7 @@
 'use strict';
 
-
-
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
-
-
 
 // sidebar variables
 const sidebar = document.querySelector("[data-sidebar]");
@@ -21,19 +17,18 @@ sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); }
 //const modalContainer = document.querySelector("[data-modal-container]");
 //const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 //const overlay = document.querySelector("[data-overlay]");
-
-// modal variable
+//
+//// modal variable
 //const modalImg = document.querySelector("[data-modal-img]");
 //const modalTitle = document.querySelector("[data-modal-title]");
 //const modalText = document.querySelector("[data-modal-text]");
-
-// modal toggle function
+//
+////modal toggle function
 //const testimonialsModalFunc = function () {
 //  modalContainer.classList.toggle("active");
 //  overlay.classList.toggle("active");
 //}
-
-// add click event to all modal items
+//// add click event to all modal items
 //for (let i = 0; i < testimonialsItem.length; i++) {
 //
 //  testimonialsItem[i].addEventListener("click", function () {
@@ -48,7 +43,7 @@ sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); }
 //  });
 //
 //}
-
+//
 // add click event to modal close button
 //modalCloseBtn.addEventListener("click", testimonialsModalFunc);
 //overlay.addEventListener("click", testimonialsModalFunc);
@@ -79,9 +74,7 @@ for (let i = 0; i < selectItems.length; i++) {
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
 const filterFunc = function (selectedValue) {
-
   for (let i = 0; i < filterItems.length; i++) {
-
     if (selectedValue === "all") {
       filterItems[i].classList.add("active");
     } else if (selectedValue === filterItems[i].dataset.category) {
@@ -153,4 +146,53 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
 
   });
+}
+
+var modal = document.getElementById("myModal");
+var modalTitle = document.getElementById("modalTitle");
+var modalDescription = document.getElementById("modalDescription");
+var modalLink = document.getElementById("modalLink");
+var modalImage = document.getElementById("modalImage");
+
+// Get all project items
+var projectItems = document.querySelectorAll('.project-item');
+
+// Loop through all project items
+projectItems.forEach(function(item) {
+  item.addEventListener('click', function(e) {
+    e.preventDefault();
+    // Set modal content
+    modalTitle.textContent = this.dataset.title;
+    modalDescription.textContent = this.dataset.description;
+    modalLink.href = this.dataset.link;
+    modalImage.src = this.dataset.image;
+    // Show the modal
+    modal.classList.add("active");
+  });
+});
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("modal-close-btn")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.classList.remove("active");
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.classList.remove("active");
+  }
+}
+
+function sendEmail(form) {
+  console.log("send email");
+  var name = form.fullname.value;
+  var email = form.email.value;
+  var message = form.message.value;
+  var subject = "Message from " + name;
+  var body = "Name: " + name + "%0D%0A" + "Email: " + email + "%0D%0A" + "Message: " + message;
+  window.open("mailto:fkalioras@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body), '_blank');
+  return false;
 }
