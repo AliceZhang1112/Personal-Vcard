@@ -36,7 +36,7 @@ const filterFunc = function (selectedValue) {
   for (let i = 0; i < filterItems.length; i++) {
     if (selectedValue === "all") {
       filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
+    } else if (selectedValue === filterItems[i].dataset.category.toLowerCase()) {
       filterItems[i].classList.add("active");
     } else {
       filterItems[i].classList.remove("active");
@@ -123,7 +123,17 @@ projectItems.forEach(function(item) {
     // Set modal content
     modalTitle.textContent = this.dataset.title;
     modalDescription.textContent = this.dataset.description;
-    modalLink.href = this.dataset.link;
+    console.log(this.dataset.link);
+    //log link type
+    console.log(this.dataset.link.length);
+    if (this.dataset.link.length == 0){
+      modalLink.innerHTML = "Source code available upon request";
+      //remove clickable
+      modalLink.href = "#";
+    } else {
+      modalLink.innerHTML = "Project Link";
+      modalLink.href = this.dataset.link;
+    }
     modalImage.src = this.dataset.image;
     // Show the modal
     modal.classList.add("active");

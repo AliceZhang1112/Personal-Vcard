@@ -1,25 +1,19 @@
 const projects = [
     {
-      category: "software engineering",
+      category: "Software Engineering",
       title: "CrossAI - Open Source Library",
       description: "CrossAI - Open Source Library for developing ML pipelines for Time-Series Analysis including Audio, Speech and Human Activity Recognition.",
       link: "http://example.com/project1",
       image: "./assets/images/CrossAILogo.webp"
     },    
     {
-        category: "web development",
-        title: "Web project for a CEID mandatory class",
-        description: "This is a web development project for a CEID mandatory class. This is a web development project for a CEID mandatory class. This is a web development project for a CEID mandatory class.",
-        link: "http://example.com/project1",
-        image: "./assets/images/project-1.webp"
+        category: "Web Development",
+        title: "Covid-19 tracing web app",
+        description: "Created for a mandatory CEID course the web app consists of both user and admin portals. The user portal allows users to register and check in to locations. The admin portal allows admins to view user check-ins and locations. The app was created using HTML, CSS, JavaScript, PHP, MySQL and MongoDB.",
+        link: "",
+        image: "./assets/images/CovidWebAppProject.webp"
       },
-      {
-        category: "applications",
-        title: "Web project for a CEID mandatory class",
-        description: "This is a web development project for a CEID mandatory class.",
-        link: "http://example.com/project1",
-        image: "./assets/images/project-2.webp"
-      },
+
   ];
   
   function generateProjectHTML(project) {
