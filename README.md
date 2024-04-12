@@ -1,6 +1,6 @@
 # modified vCard - Personal portfolio
 
-modified vCard is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript. It is based on the original vCard template by [Codewitsadee](https://github.com/codewithsadee/vcard-personal-portfolio) but it is modified to be more manageable and more suitable for a sofware engineer.
+modified vCard is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript. It is based on the original vCard template by [Codewitsadee](https://github.com/codewithsadee/vcard-personal-portfolio) but it is modified to be more manageable and more suitable for a software engineer.
 
 More specifically, the following changes have been made:
 - The original template was a single page website. The modified version retains the single HTML approach but JS files are used to populate the projects and resume sections.
@@ -24,22 +24,6 @@ More specifically, the following changes have been made:
 Before you begin, ensure you have met the following requirements:
 
 * [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
-
-## Installing modified vCard
-
-To install **modified vCard**, follow these steps:
-
-Linux and macOS:
-
-```bash
-sudo git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
-```
-
-Windows:
-
-```bash
-git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
-```
 
 ## Contact
 
