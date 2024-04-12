@@ -13,6 +13,8 @@ More specifically, the following changes have been made:
 
 ## Screenshots
 
+Screenshots are taken from my [personal portfolio website](https://fothot2.github.io), which is based on this template.
+
 ![About Screen](./assets/images/about-screen.png)
 ![Resume Screen](./assets/images/Resume.png)
 ![Portfolio Screen](./assets/images/Portofolio.png)
